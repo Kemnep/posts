@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 import { ErrorBoundary } from "./pages/errors/ErrorBoundary";
 import { Main } from "./templates/Main/Main";
@@ -63,7 +63,7 @@ const ProfileRouter = {
     ]
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     MainRouter,
     ProfileRouter
 ])
