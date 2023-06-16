@@ -1,5 +1,5 @@
 import React from "react";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider, HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import "bootstrap/scss/bootstrap.scss";

@@ -1,4 +1,4 @@
-import { createBrowserRouter, createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 import { ErrorBoundary } from "./pages/errors/ErrorBoundary";
 import { Main } from "./templates/Main/Main";
@@ -63,9 +63,11 @@ const ProfileRouter = {
     ]
 }
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     MainRouter,
     ProfileRouter
-])
+], {
+    basename : (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? '' : 'https://kemnep.github.io/posts'
+})
 
 export default router
